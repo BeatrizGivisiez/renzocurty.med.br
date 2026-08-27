@@ -1,0 +1,8 @@
+:root{
+  --dur-fast:120ms;
+  --dur:180ms;
+  --ease:cubic-bezier(.2,.6,.2,1);
+}
+
+/* Único keyframe do sistema: ponto de status pulsando. */
+@keyframes rc-pulse{0%,100%{opacity:1}50%{opacity:.25}}

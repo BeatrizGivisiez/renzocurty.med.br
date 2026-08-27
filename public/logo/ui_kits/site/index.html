@@ -1,0 +1,187 @@
+<!-- @dsCard group="Site" viewport="1280x760" name="Site institucional" subtitle="Hero, atuação profissional e contato, navegáveis" -->
+<!-- @startingPoint section="Site" subtitle="Página institucional completa" viewport="1280x760" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Renzo Curty · UI kit do site</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:var(--rc-verde-500);text-decoration:none}
+a:hover{color:var(--accent-link-hover)}
+::selection{background:var(--selection-bg);color:var(--selection-fg)}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../ds-fallback.js"></script>
+<script src="../../_ds_bundle.js" onerror="void 0"></script>
+<script type="text/jsx" id="rc-app">
+const NS = (function () {
+  var fb = window.RCFallback || {};
+  var ns = null, keys = [];
+  try { keys = Object.keys(window); } catch (e) {}
+  for (var i = 0; i < keys.length; i++) {
+    try {
+      var v = window[keys[i]];
+      if (!v || typeof v !== 'object' || v === fb) continue;
+      if (v.self === v || v.window === v) continue;          // frames
+      if (v.Button || v.RoleCard || v.SectionHeading || v.TextField || v.ImageCard) { ns = v; break; }
+    } catch (e) { /* propriedade cross-origin: ignora */ }
+  }
+  return Object.assign({}, fb, ns || {});
+})();
+const { Button, SectionHeading, MetricStat, RoleCard, InfoCell, TextField, Chip } = NS;
+
+const links = [["#topo","Início"],["#atuacao","Atuação"],["#contato","Contato"]];
+
+function Header() {
+  return (
+    <header style={{position:'sticky',top:0,zIndex:50,background:'rgba(30,38,23,.92)',backdropFilter:'var(--blur-header)',borderBottom:'1px solid var(--border-on-dark)'}}>
+      <div style={{maxWidth:'var(--container-max)',margin:'0 auto',padding:'0 var(--container-gutter)',height:'var(--header-h)',display:'flex',alignItems:'center',justifyContent:'space-between',gap:32}}>
+        <a href="#topo" style={{display:'flex',alignItems:'center',gap:12,textDecoration:'none'}}>
+          <div style={{width:34,height:34,border:'1px solid rgba(245,241,232,.45)',display:'grid',placeItems:'center',fontFamily:'var(--font-display)',fontSize:16,color:'var(--rc-creme)'}}>RC</div>
+          <div style={{display:'flex',flexDirection:'column',lineHeight:1.15}}>
+            <span style={{fontFamily:'var(--font-display)',fontSize:19,color:'var(--rc-creme)',whiteSpace:'nowrap'}}>Dr. Renzo Curty</span>
+            <span style={{fontFamily:'var(--font-mono)',fontSize:9,letterSpacing:'1.6px',textTransform:'uppercase',color:'var(--text-on-dark-faint)'}}>Médico</span>
+          </div>
+        </a>
+        <nav style={{display:'flex',alignItems:'center',gap:30}}>
+          {links.map(([h,l]) => <a key={h} href={h} style={{fontSize:'var(--fs-ui)',fontWeight:500,color:'var(--text-on-dark-secondary)',whiteSpace:'nowrap'}}>{l}</a>)}
+          <Button variant="primary" size="sm" href="#contato" style={{marginLeft:6}}>Agendar consulta</Button>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function Hero() {
+  return (
+    <section id="topo" style={{position:'relative',background:'var(--surface-dark)',color:'var(--text-on-dark)',overflow:'hidden'}}>
+      <div style={{position:'absolute',inset:0,background:'var(--glow-corner)'}} />
+      <div style={{position:'relative',maxWidth:'var(--container-max)',margin:'0 auto',padding:'0 var(--container-gutter)',display:'grid',gridTemplateColumns:'1.05fr .95fr',gap:56,alignItems:'stretch',minHeight:660}}>
+        <div style={{display:'flex',flexDirection:'column',justifyContent:'center',padding:'96px 0'}}>
+          <div style={{marginBottom:34,fontFamily:'var(--font-mono)',fontSize:10,letterSpacing:'2.4px',textTransform:'uppercase',color:'rgba(245,241,232,.65)'}}>Medicina · Gestão em Saúde Pública · Educação médica</div>
+          <h1 style={{margin:0,fontFamily:'var(--font-display)',fontWeight:400,fontSize:'var(--fs-display-1)',lineHeight:'var(--lh-display)',letterSpacing:'var(--tracking-display)',textWrap:'balance'}}>
+            Assistência, gestão e<br /><span style={{fontStyle:'italic',color:'var(--rc-salvia-300)'}}>educação</span> em saúde.
+          </h1>
+          <p style={{margin:'30px 0 0',maxWidth:520,fontSize:'var(--fs-body-lg)',lineHeight:1.62,color:'var(--text-on-dark-secondary)',textWrap:'pretty'}}>
+            Médico pela Universidade de Vassouras e gestor em Saúde Pública. Atua na interface entre assistência médica, gestão estratégica e educação em saúde.
+          </p>
+          <div style={{display:'flex',gap:14,marginTop:42,flexWrap:'wrap'}}>
+            <Button variant="primary" href="#contato">Agendar avaliação</Button>
+            <Button variant="secondary" href="#atuacao">Ver trajetória</Button>
+          </div>
+          <div style={{display:'flex',gap:44,marginTop:64,paddingTop:30,borderTop:'1px solid rgba(245,241,232,.14)'}}>
+            <MetricStat value="2026" label="Diretor Médico · ABMAR" />
+            <MetricStat value="24h" label="Semanais em urgência" />
+            <MetricStat value="05" label="Formações concluídas" />
+          </div>
+        </div>
+        <div style={{position:'relative'}}>
+          <div style={{position:'absolute',inset:0,left:-20,overflow:'hidden'}}>
+            <img src="../../assets/wa1.jpeg" alt="Dr. Renzo Curty" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'60% 22%'}} />
+            <div style={{position:'absolute',inset:0,background:'var(--scrim-left)'}} />
+          </div>
+          <div style={{position:'absolute',bottom:52,right:0,background:'var(--surface-veil)',backdropFilter:'var(--blur-veil)',border:'1px solid var(--border-on-dark)',padding:'20px 24px',maxWidth:266}}>
+            <div style={{fontFamily:'var(--font-mono)',fontSize:9,letterSpacing:'1.6px',textTransform:'uppercase',color:'var(--accent-label-dark)'}}>Atuação assistencial</div>
+            <div style={{marginTop:10,fontSize:'var(--fs-ui)',lineHeight:1.55,color:'rgba(245,241,232,.82)'}}>Urgência e emergência: avaliação, estratificação de risco, diagnóstico e manejo de pacientes em diferentes níveis de complexidade.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const roles = [
+  {period:'2026 · Atual',status:'Ativo',active:true,role:'Diretor Médico',org:'ABMAR · Medicina de Áreas Remotas',description:'Supervisão técnica e científica das atividades médicas da entidade: qualidade e segurança dos protocolos assistenciais e elaboração de diretrizes clínicas.'},
+  {period:'2026 · Atual',status:'Ativo',active:true,role:'Médico · servidor público',org:'Hospital Municipal Luiz Gonzaga · 24h semanais',description:'Urgência e emergência: avaliação, estratificação de risco, diagnóstico e manejo de pacientes em diferentes níveis de complexidade.'},
+  {period:'2024 · 2026',status:'Concluído',role:'Diretor Acadêmico',org:'ABMAR',description:'Coordenação das atividades científicas e formativas: cursos, congressos e jornadas.'},
+  {period:'2024 · 2025',status:'Concluído',role:'Coordenador Regional SE-1',org:'DENEM',description:'Articulação política e formativa das escolas médicas do Rio de Janeiro e Espírito Santo.'},
+  {period:'2023 · 2026',status:'Concluído',role:'Presidente',org:'DCE · Universidade de Vassouras',description:'Representação dos estudantes junto à administração universitária e em órgãos colegiados.'}
+];
+
+function Roles() {
+  return (
+    <section id="atuacao" style={{maxWidth:'var(--container-max)',margin:'0 auto',padding:'var(--section-y) var(--container-gutter)'}}>
+      <SectionHeading number="03" label="Atuação profissional" title="Vínculos, cargos e responsabilidades" />
+      <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:1,background:'rgba(25,28,19,.13)',marginTop:56,border:'1px solid rgba(25,28,19,.13)'}}>
+        {roles.map((r,i) => <RoleCard key={i} {...r} span={roles.length%2===1 && i===roles.length-1 ? '1 / -1' : undefined} />)}
+      </div>
+    </section>
+  );
+}
+
+const motivos = ['Consulta clínica geral','Consultoria em gestão','Convite acadêmico','Imprensa'];
+
+function Contact() {
+  const [motivo,setMotivo] = React.useState(motivos[0]);
+  const [enviado,setEnviado] = React.useState(false);
+  return (
+    <section id="contato" style={{background:'var(--surface-dark)',color:'var(--text-on-dark)'}}>
+      <div style={{maxWidth:'var(--container-max)',margin:'0 auto',padding:'var(--section-y) var(--container-gutter)'}}>
+        <SectionHeading number="07" label="Contato" tone="dark" title="Agende uma avaliação clínica"
+          lead="Atendimento ambulatorial em clínica geral, consultoria em gestão de saúde e convites para atividades científicas." />
+        <div style={{marginTop:56,border:'1px solid rgba(168,178,146,.4)',background:'rgba(168,178,146,.07)'}}>
+          <div style={{padding:'22px 28px',borderBottom:'1px solid rgba(168,178,146,.28)',display:'flex',alignItems:'center',justifyContent:'space-between',gap:20,flexWrap:'wrap'}}>
+            <div style={{fontFamily:'var(--font-display)',fontSize:'var(--fs-title-2)',lineHeight:1.1}}>Ambulatório de Clínica Geral</div>
+            <span style={{fontFamily:'var(--font-mono)',fontSize:9.5,letterSpacing:'1.5px',textTransform:'uppercase',padding:'6px 12px',border:'1px solid rgba(168,178,146,.5)',color:'var(--rc-salvia-300)',whiteSpace:'nowrap'}}>Agenda aberta</span>
+          </div>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)'}}>
+            <InfoCell label="Dias de atendimento" value="Quintas e sextas-feiras" />
+            <InfoCell label="Modalidades" value="Convênios e particular" />
+            <InfoCell label="Local" value="Hospital Flávio Leal" sub="Piraí · RJ" />
+            <InfoCell label="Agendamentos" value="(24) 3511-5600" sub="Ramal 2 · Recepção do ambulatório" divider={false} />
+          </div>
+        </div>
+        <div style={{marginTop:64,background:'rgba(245,241,232,.05)',border:'1px solid var(--border-on-dark)',padding:'44px 44px 40px'}}>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 2fr',gap:56,alignItems:'start'}}>
+            <div>
+              <div style={{fontFamily:'var(--font-display)',fontSize:31,lineHeight:1.12}}>Envie uma solicitação</div>
+              <p style={{margin:'14px 0 0',fontSize:'var(--fs-body-xs)',lineHeight:1.6,color:'var(--text-on-dark-muted)'}}>Este formulário não substitui atendimento de urgência: em emergências, procure o serviço de saúde mais próximo ou ligue 192.</p>
+            </div>
+            <div style={{display:'flex',flexDirection:'column',gap:22}}>
+              <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:18}}>
+                <TextField label="Nome completo" placeholder="Como devemos chamá-lo" />
+                <TextField label="E-mail" type="email" placeholder="nome@email.com" />
+                <TextField label="Telefone" type="tel" placeholder="(00) 00000-0000" />
+              </div>
+              <div>
+                <div style={{fontFamily:'var(--font-mono)',fontSize:9,letterSpacing:'1.6px',textTransform:'uppercase',color:'var(--text-on-dark-faint)',marginBottom:11}}>Motivo do contato</div>
+                <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+                  {motivos.map(m => <Chip key={m} as="button" onDark selected={motivo===m} onClick={()=>setMotivo(m)}>{m}</Chip>)}
+                </div>
+              </div>
+              <TextField label="Mensagem" multiline rows={3} placeholder="Descreva brevemente sua necessidade" />
+              <div style={{display:'flex',justifyContent:'flex-end',alignItems:'center',gap:16}}>
+                {enviado ? <span style={{fontSize:'var(--fs-ui-sm)',color:'var(--rc-salvia-300)'}}>Solicitação registrada · motivo: {motivo}</span> : null}
+                <Button variant="primary" size="sm" onClick={()=>setEnviado(true)}>Enviar solicitação</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.Fragment><Header /><Hero /><Roles /><Contact /></React.Fragment>
+);
+</script>
+<script>
+(function () {
+  var src = document.getElementById('rc-app').textContent;
+  var out = Babel.transform(src, { presets: [['react', { runtime: 'classic' }]], sourceType: 'script' }).code;
+  new Function(out)();
+})();
+</script>
+</body>
+</html>
