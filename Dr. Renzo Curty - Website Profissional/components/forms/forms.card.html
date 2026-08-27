@@ -1,0 +1,57 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Formulário" subtitle="Campo, área de texto e escolha em chips" -->
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body)}</style></head>
+<body><div id="r"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../ds-fallback.js"></script>
+<script src="../../_ds_bundle.js" onerror="void 0"></script>
+<script type="text/jsx" id="rc-app">
+const NS = (function () {
+  var fb = window.RCFallback || {};
+  var ns = null, keys = [];
+  try { keys = Object.keys(window); } catch (e) {}
+  for (var i = 0; i < keys.length; i++) {
+    try {
+      var v = window[keys[i]];
+      if (!v || typeof v !== 'object' || v === fb) continue;
+      if (v.self === v || v.window === v) continue;          // frames
+      if (v.Button || v.RoleCard || v.SectionHeading || v.TextField || v.ImageCard) { ns = v; break; }
+    } catch (e) { /* propriedade cross-origin: ignora */ }
+  }
+  return Object.assign({}, fb, ns || {});
+})();
+const { TextField, Chip, Button } = NS;
+const App = () => {
+  const [m, setM] = React.useState('Consulta clínica geral');
+  const opts = ['Consulta clínica geral','Consultoria em gestão','Convite acadêmico'];
+  return (
+    <div style={{padding:'20px 24px'}}>
+      <div style={{background:'var(--surface-dark)',border:'1px solid var(--border-on-dark)',padding:'24px 26px',display:'flex',flexDirection:'column',gap:18}}>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
+          <TextField label="Nome completo" placeholder="Como devemos chamá-lo" />
+          <TextField label="E-mail" type="email" placeholder="nome@email.com" />
+        </div>
+        <div>
+          <div style={{fontFamily:'var(--font-mono)',fontSize:9,letterSpacing:'1.6px',textTransform:'uppercase',color:'var(--text-on-dark-faint)',marginBottom:11}}>Motivo do contato</div>
+          <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+            {opts.map(o => <Chip key={o} as="button" onDark selected={m===o} onClick={()=>setM(o)}>{o}</Chip>)}
+          </div>
+        </div>
+        <TextField label="Mensagem" multiline rows={2} placeholder="Descreva brevemente sua necessidade" />
+        <div style={{display:'flex',justifyContent:'flex-end'}}><Button variant="primary" size="sm">Enviar solicitação</Button></div>
+      </div>
+    </div>
+  );
+};
+ReactDOM.createRoot(document.getElementById('r')).render(<App />);
+</script>
+<script>
+(function () {
+  var src = document.getElementById('rc-app').textContent;
+  var out = Babel.transform(src, { presets: [['react', { runtime: 'classic' }]], sourceType: 'script' }).code;
+  new Function(out)();
+})();
+</script></body></html>

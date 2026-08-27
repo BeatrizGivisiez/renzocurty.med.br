@@ -1,0 +1,45 @@
+.footer {
+  background: var(--surface-dark);
+  border-top: var(--hairline-dark);
+}
+
+.row {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 32px var(--container-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.monogram {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-on-dark-strong);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--text-on-dark);
+}
+
+.copy {
+  font-size: 13px;
+  color: var(--text-on-dark-muted);
+}
+
+.crm {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-on-dark-faint);
+}

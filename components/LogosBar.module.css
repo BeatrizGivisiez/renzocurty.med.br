@@ -1,0 +1,36 @@
+.section {
+  background: var(--surface-alt);
+  border-bottom: var(--hairline-soft);
+}
+
+.row {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 26px var(--container-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label-sm);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.logos span {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: rgba(25, 28, 19, 0.72);
+}

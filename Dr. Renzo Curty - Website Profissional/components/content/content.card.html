@@ -1,0 +1,56 @@
+<!-- @dsCard group="Components" viewport="700x380" name="Conteúdo" subtitle="Card de vínculo, indicador, linha de lista e célula de dado" -->
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body)}</style></head>
+<body><div id="r"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../ds-fallback.js"></script>
+<script src="../../_ds_bundle.js" onerror="void 0"></script>
+<script type="text/jsx" id="rc-app">
+const NS = (function () {
+  var fb = window.RCFallback || {};
+  var ns = null, keys = [];
+  try { keys = Object.keys(window); } catch (e) {}
+  for (var i = 0; i < keys.length; i++) {
+    try {
+      var v = window[keys[i]];
+      if (!v || typeof v !== 'object' || v === fb) continue;
+      if (v.self === v || v.window === v) continue;          // frames
+      if (v.Button || v.RoleCard || v.SectionHeading || v.TextField || v.ImageCard) { ns = v; break; }
+    } catch (e) { /* propriedade cross-origin: ignora */ }
+  }
+  return Object.assign({}, fb, ns || {});
+})();
+const { RoleCard, MetricStat, ListRow, InfoCell } = NS;
+ReactDOM.createRoot(document.getElementById('r')).render(
+  <div style={{padding:'20px 24px',display:'flex',flexDirection:'column',gap:20}}>
+    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:1,background:'var(--border-hairline)',border:'1px solid var(--border-hairline)'}}>
+      <RoleCard active period="2026 · Atual" status="Ativo" role="Diretor Médico" org="ABMAR" description="Supervisão técnica e científica das atividades médicas da entidade." style={{minHeight:200,padding:'26px 24px'}} />
+      <RoleCard period="2024 · 2025" status="Concluído" role="Coordenador Regional" org="DENEM" description="Articulação das escolas médicas do Rio de Janeiro e Espírito Santo." style={{minHeight:200,padding:'26px 24px'}} />
+    </div>
+    <div style={{background:'var(--surface-dark)',padding:'22px 24px',display:'flex',gap:44,borderTop:'1px solid var(--border-on-dark)'}}>
+      <MetricStat value="2026" label="Diretor Médico · ABMAR" />
+      <MetricStat value="24h" label="Semanais em urgência" />
+      <MetricStat value="05" label="Formações concluídas" />
+    </div>
+    <div>
+      <ListRow index="2024" title="Guia Prático de Clínica Médica" meta="1ª edição" description="FERRAZ, A. R.; BREVES, R. C.; PORTO, G. M. A.; MARTINS, P. H. P." />
+      <ListRow index="2022" title="Abordagem geral do Divertículo de Zenker" meta="v.18, e10950" last />
+    </div>
+    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',background:'var(--surface-dark)',border:'1px solid rgba(168,178,146,.4)'}}>
+      <InfoCell label="Dias" value="Quintas e sextas" />
+      <InfoCell label="Local" value="Hospital Flávio Leal" sub="Piraí · RJ" />
+      <InfoCell label="Agendamentos" value="(24) 3511-5600" sub="Ramal 2" divider={false} />
+    </div>
+  </div>
+);
+</script>
+<script>
+(function () {
+  var src = document.getElementById('rc-app').textContent;
+  var out = Babel.transform(src, { presets: [['react', { runtime: 'classic' }]], sourceType: 'script' }).code;
+  new Function(out)();
+})();
+</script></body></html>

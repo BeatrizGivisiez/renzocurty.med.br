@@ -1,0 +1,34 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listGap {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+}
+
+.rowBordered {
+  padding: 15px 0;
+  border-top: 1px solid var(--border-hairline-strong);
+}
+
+.rowBordered:last-child {
+  border-bottom: 1px solid var(--border-hairline-strong);
+}
+
+.index {
+  font-family: var(--font-mono);
+}
+
+.text {
+  line-height: 1.45;
+}

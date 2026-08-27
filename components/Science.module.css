@@ -1,0 +1,251 @@
+.section {
+  background: var(--surface-alt);
+  border-top: var(--hairline-soft);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--section-y) var(--container-gutter);
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent-label);
+}
+
+.title {
+  margin: 18px 0 0;
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-display-4);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display-sm);
+  max-width: 18ch;
+}
+
+.metrics {
+  display: flex;
+  gap: 40px;
+}
+
+.metricValue {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-5);
+  line-height: 1;
+}
+
+.metricLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label-sm);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-top: 6px;
+}
+
+.bookCard {
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  padding: 38px 36px;
+}
+
+.bookHeading {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label-sm);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--rc-salvia-400);
+}
+
+.bookRow {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: end;
+}
+
+.bookTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-5);
+  line-height: 1.08;
+}
+
+.bookAuthors {
+  margin-top: 12px;
+  font-size: var(--fs-body-xs);
+  line-height: 1.6;
+  color: var(--text-on-dark-muted);
+}
+
+.bookMeta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  color: var(--text-on-dark-muted);
+  white-space: nowrap;
+}
+
+.pubGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  margin-top: 56px;
+}
+
+.colHeading {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label-sm);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding-bottom: 16px;
+}
+
+.articleRow {
+  padding: 24px 0;
+  border-top: var(--hairline-strong, 1px solid var(--border-hairline-strong));
+}
+
+.rowTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rowTag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--accent-label);
+}
+
+.rowMeta {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text-faint);
+}
+
+.articleTitle {
+  margin-top: 12px;
+  font-size: 19px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.35;
+}
+
+.articleAuthors {
+  margin-top: 10px;
+  font-size: var(--fs-ui);
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.talkRow {
+  padding: 22px 0;
+  border-top: var(--hairline-strong, 1px solid var(--border-hairline-strong));
+}
+
+.talkTitle {
+  margin-top: 11px;
+  font-size: 17px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.4;
+}
+
+.talkAuthors {
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(25, 28, 19, 0.55);
+}
+
+.mediaCard {
+  margin-top: 56px;
+  background: var(--surface-page);
+  border: 1px solid var(--border-hairline-strong);
+  padding: 34px 32px;
+}
+
+.mediaTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mediaHeading {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label-sm);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--accent-label);
+}
+
+.mediaGrid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.mediaItem {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.mediaIndex {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border-hairline-strong);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--text-muted);
+}
+
+.mediaItemTitle {
+  font-size: 16.5px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.4;
+}
+
+.mediaItemAuthors {
+  margin-top: 7px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .pubGrid,
+  .mediaGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .bookRow {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,43 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Mídia" subtitle="Foto com véu de proteção e legenda" -->
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body)}</style></head>
+<body><div id="r"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../ds-fallback.js"></script>
+<script src="../../_ds_bundle.js" onerror="void 0"></script>
+<script type="text/jsx" id="rc-app">
+const NS = (function () {
+  var fb = window.RCFallback || {};
+  var ns = null, keys = [];
+  try { keys = Object.keys(window); } catch (e) {}
+  for (var i = 0; i < keys.length; i++) {
+    try {
+      var v = window[keys[i]];
+      if (!v || typeof v !== 'object' || v === fb) continue;
+      if (v.self === v || v.window === v) continue;          // frames
+      if (v.Button || v.RoleCard || v.SectionHeading || v.TextField || v.ImageCard) { ns = v; break; }
+    } catch (e) { /* propriedade cross-origin: ignora */ }
+  }
+  return Object.assign({}, fb, ns || {});
+})();
+const { ImageCard } = NS;
+ReactDOM.createRoot(document.getElementById('r')).render(
+  <div style={{padding:'20px 24px',display:'grid',gridTemplateColumns:'1.3fr 1fr',gap:16}}>
+    <ImageCard strong height={240} src="../../assets/grupo5.jpeg" alt="Atividade do NEABI"
+      eyebrow="Intervenção comunitária · NEABI"
+      title="Valorização das culturas afro-brasileiras e indígenas" />
+    <ImageCard height={240} objectPosition="50% 50%" src="../../assets/grupo1.jpeg" alt="Atividade científica"
+      eyebrow="ABMAR" title="Organização de eventos científicos" />
+  </div>
+);
+</script>
+<script>
+(function () {
+  var src = document.getElementById('rc-app').textContent;
+  var out = Babel.transform(src, { presets: [['react', { runtime: 'classic' }]], sourceType: 'script' }).code;
+  new Function(out)();
+})();
+</script></body></html>
