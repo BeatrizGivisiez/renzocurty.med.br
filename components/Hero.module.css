@@ -146,6 +146,18 @@
   object-position: 60% 22%;
 }
 
+@media (max-width: 900px) {
+  .portraitFrame img {
+    object-position: 60% 8%;
+  }
+}
+
+@media (max-width: 560px) {
+  .portraitFrame img {
+    object-position: 60% 3%;
+  }
+}
+
 .portraitScrim {
   position: absolute;
   inset: 0;
@@ -189,22 +201,55 @@
   .grid {
     grid-template-columns: 1fr;
     min-height: 0;
-  }
-
-  .portrait {
-    min-height: 380px;
-    order: -1;
+    gap: 0;
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .copy {
-    padding: 56px 0 40px;
+    display: contents;
+  }
+
+  .eyebrow {
+    order: 1;
+  }
+
+  .title {
+    order: 2;
+  }
+
+  .portrait {
+    order: 3;
+    min-height: 380px;
+    margin-top: 32px;
+  }
+
+  .lead {
+    order: 4;
+  }
+
+  .actions {
+    order: 5;
+  }
+
+  .stats {
+    order: 6;
   }
 }
 
 @media (max-width: 560px) {
+  .grid {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .title {
     font-size: 44px;
     letter-spacing: -0.8px;
+  }
+
+  .portrait {
+    min-height: 300px;
   }
 
   .stats {
