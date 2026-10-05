@@ -1,5 +1,6 @@
 import Image from "next/image";
-import NumberedList from "./NumberedList";
+import { Siren, Buildings, FileText, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import NumberedList from "@/components/NumberedList/NumberedList";
 import styles from "./About.module.css";
 
 const areasAtuacao = ["Ciências da Saúde · Medicina", "Administração · Gestão em Saúde"];
@@ -71,6 +72,36 @@ export default function About() {
         <div>
           <div className={styles.listHeading}>Compromisso social</div>
           <NumberedList items={compromissoSocial} />
+        </div>
+      </div>
+
+      <div className={styles.facts}>
+        <div className={styles.factItem}>
+          <div className={styles.factLabel}>
+            <Siren size={13} />
+            Urgência e emergência
+          </div>
+          <div className={styles.factValue}>Hospital Municipal Luiz Gonzaga</div>
+          <div className={styles.factSub}>Plantão de 24h semanais</div>
+        </div>
+        <div className={styles.factItem}>
+          <div className={styles.factLabel}>
+            <Buildings size={13} />
+            Institucional
+          </div>
+          <div className={styles.factValue}>Diretoria Médica · ABMAR</div>
+          <div className={styles.factSub}>Medicina de áreas remotas</div>
+        </div>
+        <div className={styles.factItem}>
+          <div className={styles.factLabel}>
+            <FileText size={13} />
+            Currículo
+          </div>
+          <a href="/curriculo.pdf" target="_blank" className={styles.factLink}>
+            Currículo Lattes
+            <ArrowUpRight size={13} weight="bold" />
+          </a>
+          <div className={styles.factSub}>lattes.cnpq.br/9074086930172329</div>
         </div>
       </div>
     </section>

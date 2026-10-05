@@ -114,51 +114,6 @@
   color: var(--text-on-dark-muted);
 }
 
-.infoRow {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 44px;
-}
-
-.infoItem {
-  padding-top: 20px;
-  border-top: var(--hairline-dark);
-}
-
-.infoLabel {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: var(--fs-label-xs);
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  color: var(--text-on-dark-faint);
-}
-
-.infoValue {
-  margin-top: 9px;
-  font-size: 16.5px;
-  line-height: 1.45;
-}
-
-.infoSub {
-  margin-top: 5px;
-  font-size: 13px;
-  color: var(--text-on-dark-muted);
-}
-
-.infoLink {
-  margin-top: 9px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 16.5px;
-  color: var(--rc-salvia-300);
-  border-bottom: 1px solid rgba(195, 203, 174, 0.45);
-}
-
 .formPanel {
   margin-top: 64px;
   background: rgba(245, 241, 232, 0.05);
@@ -170,7 +125,15 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 56px;
-  align-items: start;
+  align-items: stretch;
+}
+
+.formIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  height: 100%;
 }
 
 .formIntroTitle {
@@ -230,6 +193,12 @@
   resize: vertical;
 }
 
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-on-dark-muted);
+  opacity: 1;
+}
+
 .chips {
   display: flex;
   gap: 8px;
@@ -257,12 +226,15 @@
 
 .submitRow {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .submitBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding: 15px 34px;
   background: var(--rc-creme);
   color: var(--surface-dark);
@@ -307,14 +279,25 @@
     border-right: none;
   }
 
-  .infoRow {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
   .formGrid {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .formIntro {
+    display: contents;
+  }
+
+  .formIntroBlock {
+    order: 1;
+  }
+
+  .fields {
+    order: 2;
+  }
+
+  .submitRow {
+    order: 3;
   }
 
   .fieldRow {

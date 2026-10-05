@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
@@ -15,7 +16,11 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
     "eslint": "^9",
-    "eslint-config-next": "16.3.3"
+    "eslint-config-next": "16.3.3",
+    "typescript": "^6.0.3"
   }
 }

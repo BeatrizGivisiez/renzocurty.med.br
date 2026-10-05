@@ -27,16 +27,10 @@
 }
 
 .monogram {
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--border-on-dark-strong);
-  display: grid;
-  place-items: center;
-  font-family: var(--font-display);
-  font-size: 16px;
-  color: var(--text-on-dark);
-  letter-spacing: 0.5px;
+  width: 50px;
+  height: 41px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .brandText {
@@ -74,7 +68,8 @@
   white-space: nowrap;
 }
 
-.navLink:hover {
+.navLink:hover,
+.navLink.active {
   color: var(--text-on-dark);
 }
 
@@ -111,6 +106,10 @@
 }
 
 @media (max-width: 900px) {
+  .brandText {
+    display: none;
+  }
+
   .nav {
     display: none;
   }
@@ -134,7 +133,8 @@
     border-top: var(--hairline-dark);
   }
 
-  .mobileLink:hover {
+  .mobileLink:hover,
+  .mobileLink.active {
     color: var(--text-on-dark);
   }
 

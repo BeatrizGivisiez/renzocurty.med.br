@@ -1,0 +1,333 @@
+CONTEÚDO DO SITE — DR. RENZO CURTY
+===================================
+Documento para revisão de texto. Mantenha os rótulos (o que vem antes de cada
+":") como estão — eles indicam onde cada texto aparece no site. Edite só o
+texto depois dos dois-pontos. Se uma lista tiver itens numerados (1, 2, 3...),
+pode adicionar, remover ou reordenar itens livremente.
+
+O site tem 2 páginas: "Início" (Home) e "Sobre". Há também um menu/rodapé que
+aparecem nas duas páginas, e uma página de erro (404).
+
+
+===================================
+MENU (aparece no topo de todas as páginas)
+===================================
+Nome: Dr. Renzo Curty
+Cargo (abaixo do nome): Médico
+Links do menu: Home | Sobre
+Botão do menu: Agendar consulta
+
+
+===================================
+PÁGINA: INÍCIO (Home)
+===================================
+
+--- Seção 1 · Topo (abertura) ---
+Categoria (linha pequena acima do título): Medicina · Gestão em Saúde Pública · Educação médica
+Título: Assistência, gestão e educação em saúde.
+Texto de apoio: Médico pela Universidade de Vassouras e gestor em Saúde Pública. Atua na interface entre assistência médica, gestão estratégica e educação em saúde, com experiência em coordenação institucional, formulação de diretrizes educacionais e organização de eventos científicos de abrangência nacional.
+Botão 1: Agendar avaliação
+Botão 2: Ver trajetória
+
+Números em destaque:
+1. 2026 — Diretor Médico · ABMAR
+2. 24h — Semanais em urgência
+3. 05 — Formações concluídas
+
+Cartão sobre a foto:
+  Título: Atuação assistencial
+  Texto: Urgência e emergência: avaliação, estratificação de risco, diagnóstico e manejo de pacientes em diferentes níveis de complexidade.
+
+--- Seção 2 · Faixa de instituições ---
+Rótulo: Vínculos e instituições
+Lista de instituições:
+1. ABMAR
+2. Universidade de Vassouras
+3. Hospital Municipal Luiz Gonzaga
+4. DENEM
+5. NEABI
+
+--- Seção 3 · Telemedicina ---
+Categoria: Teleconsulta
+Título: Consulta médica por telemedicina
+Texto de apoio: Atendimento médico online, no conforto da sua casa. Consulte com o Dr. Renzo Curty pelo celular, com horário marcado e sem deslocamento.
+
+Benefícios (3 itens):
+1. Horário agendado — Você escolhe o melhor momento
+2. Sem fila de espera — Atendimento de onde estiver
+3. Receitas e documentos — Médicos, emitidos online*
+
+Botão 1: Agendar teleconsulta
+Botão 2: Prefiro presencial
+
+Cartão de chamada (ilustração):
+  Rótulo no topo: Teleconsulta
+  Nome do médico: Dr. Renzo Curty
+  Cargo: Médico · CRM/RJ 52.140936-9
+  Texto ao lado do ícone de celular: Paciente em casa, pelo celular
+
+Documentos (4 etiquetas pequenas):
+1. Receita digital
+2. Pedido de exames
+3. Atestado médico
+4. Documentos online
+
+Bloco "Agende sua consulta":
+  Rótulo: Agende sua consulta
+  Telefone/WhatsApp: (24) 99828-0630
+
+Passo a passo (3 itens):
+1. Chame no WhatsApp — Envie uma mensagem para o número de agendamento.
+2. Agende o horário — Combine o dia e a hora da sua teleconsulta.
+3. Consulte pelo celular — Atendimento médico online, no conforto da sua casa.
+
+Nota de rodapé (asterisco): *Quando indicado pelo médico e conforme a legislação vigente.
+
+--- Seção 4 · Contato ---
+Categoria: Contato
+Título: Agende uma avaliação clínica
+Texto de apoio: Atendimento ambulatorial em clínica geral, consultoria em gestão de saúde e convites para atividades científicas e formativas.
+
+Cartão "Ambulatório de Clínica Geral":
+  Título: Ambulatório de Clínica Geral
+  Selo: Agenda aberta
+  Dias de atendimento: Quintas e sextas-feiras
+  Modalidades: Convênios e particular
+  Local: Hospital Flávio Leal — Piraí · RJ
+  Agendamentos: (24) 3511-5600 — Ramal 2 · Recepção do ambulatório
+
+Formulário "Envie uma solicitação":
+  Título: Envie uma solicitação
+  Texto: Retorno em até dois dias úteis. Este formulário não substitui atendimento de urgência: em emergências, procure o serviço de saúde mais próximo ou ligue 192.
+  Campo: Nome completo (placeholder: Como devemos chamá-lo)
+  Campo: E-mail (placeholder: nome@email.com)
+  Campo: Telefone (placeholder: (00) 00000-0000)
+  Rótulo: Motivo do contato
+  Opções de motivo:
+    1. Consulta clínica geral
+    2. Consultoria em gestão
+    3. Convite acadêmico
+    4. Imprensa
+  Campo: Mensagem (placeholder: Descreva brevemente sua necessidade)
+  Botão: Enviar pelo WhatsApp
+  Mensagem após enviar: Abrimos o WhatsApp com sua mensagem. Toque em enviar para concluir.
+
+
+===================================
+PÁGINA: SOBRE
+===================================
+(Título da aba do navegador: Sobre)
+
+--- Seção 1 · Sobre ---
+Categoria: 01 · Sobre
+Título: Clínica, gestão e ensino no mesmo movimento.
+
+Parágrafo 1: Médico pela Universidade de Vassouras e gestor em Saúde Pública, com pós-graduações em Psicanálise Clínica e em Docência no Ensino Superior e Metodologias Ativas. Dedica-se à produção científica na área médica, além de coordenar projetos focados em saúde coletiva, políticas públicas e equidade racial.
+
+Parágrafo 2: Atualmente, é Diretor Médico da Associação Brasileira de Medicina de Áreas Remotas (ABMAR), onde atua na elaboração de diretrizes técnicas e qualificação científica. Possui uma sólida trajetória em liderança e articulação institucional, tendo presidido o Diretório Central dos Estudantes da Universidade de Vassouras e exercido funções de coordenação regional na Direção Executiva Nacional dos Estudantes de Medicina (DENEM).
+
+Foto - nome: Dr. Renzo Curty
+Foto - legenda: Médico · Gestor em Saúde Pública
+
+Lista "Áreas de atuação":
+1. Ciências da Saúde · Medicina
+2. Administração · Gestão em Saúde
+
+Lista "Interesses técnicos":
+1. Gestão de redes de atenção
+2. Planejamento estratégico em saúde
+3. Educação médica
+4. Assistência em contextos remotos
+
+Lista "Compromisso social":
+1. Equidade racial
+2. Saúde coletiva
+3. Políticas públicas
+
+Dados rápidos (linha final da seção):
+  Urgência e emergência: Hospital Municipal Luiz Gonzaga — Plantão de 24h semanais
+  Institucional: Diretoria Médica · ABMAR — Medicina de áreas remotas
+  Currículo: Currículo Lattes (link) — lattes.cnpq.br/9074086930172329
+
+--- Seção 2 · Trajetória ---
+Categoria: 02 · Trajetória
+Título: Formação e titulação
+Link: Currículo Lattes completo (abre o PDF)
+
+Formação (lista, mais recente primeiro):
+1. 2020 · 2026 — Graduação em Medicina — Universidade de Vassouras (FUSVE) — TCC: Síndrome de Zollinger-Ellison
+2. 2024 · 2026 — Graduação em Gestão em Saúde Pública — Universidade de Vassouras (FUSVE) — TCC: Determinantes Sociais da Saúde · o papel da gestão na redução das iniquidades
+3. 2025 · 2026 — Especialização em Psicanálise Clínica — Faculdade Metropolitana de Franca (FAMEF)
+4. 2025 · 2026 — Especialização em Docência no Ensino Superior e Metodologias Ativas — Faculdade Metropolitana de Franca (FAMEF)
+5. 2017 · 2018 — Técnico em Enfermagem — Faculdade Sul Fluminense (FaSF), Volta Redonda
+
+Prêmios e títulos:
+1. 2026 — Mérito Acadêmico do curso de Gestão em Saúde Pública · Universidade de Vassouras
+2. 2025 — Membro Honorário, Centro Acadêmico de Odontologia (CAO Univassouras)
+3. 2025 — Membro Honorário, DCE da Faculdade de Miguel Pereira (FAMIPE)
+4. 2022 — Membro Honorário, DCE da Universidade de Vassouras
+5. 2016 — Cofundador da União Municipal dos Estudantes Secundaristas de Piraí
+
+Certificações recentes:
+1. ACLS · Suporte Avançado de Vida em Cardiologia — 16h
+2. Prática Baseada em Evidências · Einstein — 2026
+3. Demência na APS: idoso e família · Einstein — 2026
+4. Delirium: prevenção e manejo · Einstein — 2026
+5. Primeiros Socorros · Projeto Vidas — 36h
+
+--- Seção 3 · Atuação profissional ---
+Categoria: 03 · Atuação profissional
+Título: Vínculos, cargos e responsabilidades
+
+Cargos (cartões, do mais recente para o mais antigo):
+1. 2026 · Atual — Ativo — Diretor Médico — ABMAR · Associação Brasileira de Medicina de Áreas Remotas
+   Descrição: Supervisão técnica e científica das atividades médicas da entidade: qualidade e segurança dos conteúdos e protocolos assistenciais, elaboração de diretrizes clínicas e representação institucional em pautas técnicas.
+2. 2026 · Atual — Ativo — Médico · servidor público — Hospital Municipal Luiz Gonzaga · 24h semanais
+   Descrição: Urgência e emergência: avaliação, estratificação de risco, diagnóstico e manejo de pacientes em diferentes níveis de complexidade, com coordenação do cuidado multiprofissional.
+3. 2024 · 2026 — Concluído — Diretor Acadêmico — ABMAR · Medicina de Áreas Remotas e Esportes de Aventura
+   Descrição: Coordenação das atividades científicas e formativas: cursos, congressos e jornadas, além da articulação com ligas, universidades e profissionais da área.
+4. 2024 · 2025 — Concluído — Coordenador Regional SE-1 e de Educação — DENEM · Diretório Executivo Nacional dos Estudantes de Medicina
+   Descrição: Articulação política, organizativa e formativa das escolas médicas do Rio de Janeiro e Espírito Santo, com acompanhamento de pautas de currículo, avaliação, internato, políticas educacionais e defesa do SUS.
+5. 2023 · 2026 — Concluído — Presidente — DCE · Diretório Central dos Estudantes da Universidade de Vassouras
+   Descrição: Representação dos estudantes junto à administração universitária e em órgãos colegiados, contribuindo para a formulação de políticas acadêmicas, de permanência e de assistência estudantil, além da promoção de atividades científicas, culturais e políticas.
+
+--- Seção 4 · Áreas remotas ---
+Categoria: 04 · Áreas remotas
+Título: Medicina onde a retaguarda não existe
+Texto de apoio: Como Diretor Médico da ABMAR, responde pela qualidade técnica e científica de uma entidade dedicada à prática médica em ambientes de difícil acesso e esportes de aventura.
+
+Legenda da foto:
+  Rótulo: Atividade científica · ABMAR
+  Título: Formação de profissionais para o ambiente adverso
+
+Responsabilidades na entidade:
+  Subtítulo: Responsabilidades na entidade
+  1. Diretor Médico — 2026 · Atual
+     Descrição: Supervisão técnica e científica das atividades médicas: qualidade e segurança dos protocolos assistenciais, elaboração de diretrizes clínicas e representação institucional em pautas técnicas.
+  2. Diretor Acadêmico — 2024 · 2026
+     Descrição: Coordenação das atividades científicas e formativas, incluindo cursos, congressos e jornadas, além da articulação com ligas acadêmicas, universidades e profissionais da área.
+
+Temas apresentados em congresso:
+1. 2024 — Impacto das mudanças climáticas na segurança alimentar e saúde populacional
+2. 2023 — Cuidados paliativos em crises humanitárias
+
+--- Seção 5 · NEABI (extensão universitária) ---
+Categoria: 05 · NEABI
+Título: Núcleo de Estudos Afro-Brasileiros e Indígenas
+Etiqueta: Projeto de extensão · 2024 · 2026
+Situação: Situação: concluído
+
+Legenda da foto principal:
+  Rótulo: Intervenção comunitária · NEABI
+  Título: Valorização das culturas afro-brasileiras e indígenas
+  Texto: Projeto de extensão universitária voltado à promoção da equidade racial e ao enfrentamento do racismo estrutural no ambiente acadêmico e na sociedade, articulando produção de conhecimento crítico com práticas educativas antirracistas.
+  Rodapé: Integrantes: Renzo Curty · Marcia Sena B. M. Ribeiro (responsável)
+
+Base legal da atuação:
+  Título: Base legal da atuação
+  1. Lei nº 10.639/2003 — Obrigatoriedade do ensino de história e cultura afro-brasileira.
+  2. Lei nº 11.645/2008 — Inclusão da história e cultura dos povos indígenas no currículo escolar.
+
+Frentes de atuação:
+  Título: Frentes de atuação
+  1. Atividades formativas e grupos de estudo
+  2. Seminários e ações culturais
+  3. Intervenções comunitárias
+  4. Fortalecimento das políticas de ações afirmativas
+  Texto final: Fundamentado na indissociabilidade entre ensino, pesquisa e extensão, com foco na formação de profissionais comprometidos com a justiça social, os direitos humanos e a diversidade étnico-racial.
+
+Duas fotos finais:
+  Foto 1 — Rótulo: ABMAR / Título: Organização de eventos científicos
+  Foto 2 — Rótulo: Extensão universitária / Título: Projeto Ipiranga Ampliado · Vassouras e região
+
+--- Seção 6 · Produção científica ---
+Categoria: 06 · Produção
+Título: Produção bibliográfica e técnica
+
+Números:
+1. 02 — Artigos
+2. 01 — Livro
+3. 04 — Palestras
+
+Livro publicado:
+  Rótulo: Livro publicado
+  Título: Guia Prático de Clínica Médica
+  Autores: FERRAZ, A. R.; BREVES, R. C.; PORTO, G. M. A.; MARTINS, P. H. P.
+  Edição: 1ª edição · 2024
+
+Artigos completos em periódicos:
+1. Rev. Eletrônica Acervo Médico — v.18, e10950 · 2022
+   Título: Abordagem geral do Divertículo de Zenker: uma revisão narrativa
+   Autores: FRAGA, A. L. G.; PORTO, G. M. A.; MARTINS, P. H. P.; CORRÊA, A. A.; BREVES, R. C.; ANDRADE, A. B. C.; CERQUEIRA, P. A. S.; GOMES, V. A.; MOREIRA, L. L.; FERRAZ, A. R.
+2. Rev. Eletrônica Acervo Médico — v.3, e9689 · 2022
+   Título: Epidemiologia e tratamento da Esofagite Eosinofílica: uma revisão narrativa
+   Autores: MARTINS, P. H. P.; FRAGA, A. L. G.; CARVALHO, F. S.; PORTO, G. M. A.; DELAIA, I. N.; LOPES, M. M.; BREVES, R. C.; MARINS, T. M.; LUIZ, Y. S.; BONANCIM, R. A. B.
+
+Demais produções técnicas:
+  Título: Processo Transexualizador: as mudanças nos aspectos biopsicossociais
+  Autores: BREVES, R. C. · 2018
+
+Apresentações de trabalho e palestras:
+1. Apresentação de trabalho · 2025 — A importância do gestor de saúde na sociedade atual — BREVES, R. C.
+2. Congresso · 2024 — Impacto das mudanças climáticas na segurança alimentar e saúde populacional: uma revisão atualizada — BREVES, R. C.
+3. Congresso · 2024 — O papel da mobilização estudantil na garantia de educação médica de qualidade — BREVES, R. C.
+4. Congresso · 2023 — Cuidados paliativos em crises humanitárias: revisão de literatura — BREVES, R. C.; KIKI, B. A. A.
+
+Entrevistas, mesas redondas e comentários na mídia (2023):
+1. Dia Nacional das Tradições Africanas: Aquilombar é re-existir — BREVES, R. C. · comentário na mídia
+2. Mesa Redonda · Tradições das Raízes de Matrizes Africanas — BREVES, R. C.; RIBEIRO, M. S. B. M.
+
+
+===================================
+RODAPÉ (aparece em todas as páginas)
+===================================
+Texto de direitos: © 2026 Dr. Renzo Curty · Todos os direitos reservados
+Registro: Médico · CRM/RJ 52.140936-9
+
+
+===================================
+PÁGINA DE ERRO (quando um link não existe)
+===================================
+Categoria: Erro 404 · Página não encontrada
+Título: Este endereço não existe por aqui.
+Texto: O link pode estar incorreto ou a página pode ter mudado de lugar. Use os caminhos abaixo para continuar a navegação.
+Botão 1: Voltar para a Home
+Botão 2: Conhecer a trajetória
+Atalhos: Atuação | Produção | Contato
+
+
+===================================
+TÍTULOS E DESCRIÇÃO PARA O GOOGLE (SEO)
+===================================
+Título padrão do site: Dr. Renzo Curty · Médico e gestor em saúde pública
+Descrição do site: Médico pela Universidade de Vassouras e gestor em Saúde Pública. Diretor Médico da ABMAR, atuação em urgência e emergência, clínica geral, educação médica e produção científica.
+Título da página Sobre: Sobre (aparece como "Sobre · Dr. Renzo Curty" na aba do navegador)
+Título da página de erro: Página não encontrada
+
+
+===================================
+MENSAGENS AUTOMÁTICAS DO WHATSAPP
+===================================
+Estes textos são preenchidos automaticamente quando alguém clica nos botões
+de WhatsApp do site (a pessoa ainda pode editar antes de enviar).
+
+Botão "Agendar teleconsulta" (seção Telemedicina, Home):
+  Olá, Dr. Renzo Curty! Vim pelo site e gostaria de agendar uma teleconsulta.
+
+Botão "Enviar pelo WhatsApp" (formulário de contato, Home) — montado assim:
+  Olá, Dr. Renzo Curty! Vim pelo site e gostaria de enviar uma solicitação.
+
+  *Nome:* (o que a pessoa digitou)
+  *E-mail:* (o que a pessoa digitou, se preencheu)
+  *Telefone:* (o que a pessoa digitou, se preencheu)
+  *Motivo:* (a opção escolhida)
+  *Mensagem:* (o que a pessoa escreveu, se preencheu)
+
+
+===================================
+DADOS DE CONTATO USADOS NO SITE
+===================================
+WhatsApp (agendamento e formulário): (24) 99828-0630
+Telefone do ambulatório: (24) 3511-5600, ramal 2
+CRM: CRM/RJ 52.140936-9
+Currículo Lattes: lattes.cnpq.br/9074086930172329

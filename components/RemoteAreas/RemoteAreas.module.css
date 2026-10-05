@@ -186,3 +186,9 @@
     font-size: 40px;
   }
 }
+
+@media (max-width: 560px) {
+  .photo {
+    min-height: 320px;
+  }
+}

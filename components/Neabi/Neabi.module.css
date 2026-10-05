@@ -269,3 +269,13 @@
     align-items: flex-start;
   }
 }
+
+@media (max-width: 560px) {
+  .photo {
+    min-height: 420px;
+  }
+
+  .photoCaption {
+    padding: 24px 22px;
+  }
+}

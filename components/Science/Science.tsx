@@ -3,7 +3,7 @@ import styles from "./Science.module.css";
 
 export default function Science() {
   return (
-    <section id="ciencia" className={styles.section}>
+    <section id="producao" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.head}>
           <div>

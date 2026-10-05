@@ -105,7 +105,7 @@
   text-wrap: pretty;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
   }

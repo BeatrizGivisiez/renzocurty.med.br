@@ -1,0 +1,519 @@
+.section {
+  position: relative;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* Anéis concêntricos decorativos, como na peça de divulgação */
+.rings {
+  position: absolute;
+  top: -260px;
+  right: -260px;
+  width: 760px;
+  height: 760px;
+  border-radius: 50%;
+  border: 1px solid var(--border-hairline-soft);
+  pointer-events: none;
+}
+
+.rings::before,
+.rings::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--border-hairline-soft);
+}
+
+.rings::before {
+  inset: -110px;
+}
+
+.rings::after {
+  inset: 120px;
+}
+
+.inner {
+  position: relative;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--section-y-lg) var(--container-gutter) var(--space-12);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* --- Texto --- */
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent-label);
+}
+
+.diamond {
+  width: 7px;
+  height: 7px;
+  background: var(--rc-marrom-600);
+  transform: rotate(45deg);
+}
+
+.title {
+  margin: 22px 0 0;
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-display-1);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.titleEm {
+  font-style: italic;
+  color: var(--rc-verde-500);
+}
+
+.lead {
+  margin: 28px 0 0;
+  max-width: 520px;
+  font-size: var(--fs-body-lg);
+  line-height: 1.62;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+.lead strong {
+  color: var(--text-primary);
+  font-weight: var(--fw-semibold);
+}
+
+.benefits {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: var(--hairline);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 16px;
+}
+
+.benefit + .benefit {
+  border-left: var(--hairline);
+}
+
+.benefitIcon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--rc-salvia-200);
+  color: var(--rc-verde-600);
+}
+
+.benefitTitle {
+  display: block;
+  font-size: var(--fs-body-xs);
+  font-weight: var(--fw-semibold);
+  line-height: 1.25;
+}
+
+.benefitText {
+  display: block;
+  margin-top: 4px;
+  font-size: var(--fs-ui-sm);
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.primary {
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  transition: background var(--dur) var(--ease);
+}
+
+.primary:hover {
+  background: var(--rc-verde-600);
+}
+
+.secondary {
+  border: 1px solid var(--border-hairline-strong);
+  color: var(--text-primary);
+  transition: border-color var(--dur) var(--ease);
+}
+
+.secondary:hover {
+  border-color: var(--text-primary);
+}
+
+/* --- Visual: janela de chamada --- */
+
+.visual {
+  position: relative;
+  padding-bottom: 64px;
+}
+
+.call {
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(19, 26, 14, 0.25);
+}
+
+.callBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: var(--hairline-dark);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-label-sm);
+  text-transform: uppercase;
+  color: var(--text-on-dark-secondary);
+}
+
+.callBarIcon {
+  margin-left: auto;
+  color: var(--text-on-dark-muted);
+}
+
+.live {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--status-active);
+  animation: rc-pulse 2s ease-in-out infinite;
+}
+
+.callStage {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  background: #fff;
+  overflow: hidden;
+}
+
+.photo {
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+/* Etiqueta de nome, como numa videochamada */
+.doctor {
+  position: absolute;
+  left: 16px;
+  bottom: 76px;
+  padding: 10px 14px;
+  background: rgba(19, 26, 14, 0.82);
+  backdrop-filter: var(--blur-veil);
+  -webkit-backdrop-filter: var(--blur-veil);
+  border-radius: 4px;
+  color: var(--text-on-dark);
+}
+
+.doctorName {
+  font-family: var(--font-display);
+  font-size: var(--fs-title-5);
+  line-height: 1.1;
+}
+
+.doctorRole {
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label-xs);
+  letter-spacing: var(--tracking-label-xs);
+  text-transform: uppercase;
+  color: var(--text-on-dark-muted);
+}
+
+.patient {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--surface-page);
+  box-shadow: 0 8px 20px rgba(19, 26, 14, 0.18);
+  color: var(--text-primary);
+  border-radius: 4px;
+  font-size: var(--fs-ui-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.patient svg {
+  color: var(--rc-verde-500);
+}
+
+.patientDot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--rc-verde-500);
+  vertical-align: 1px;
+}
+
+.docs {
+  position: absolute;
+  left: -36px;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+.doc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px 10px 10px;
+  background: #fff;
+  border: var(--hairline-soft);
+  border-radius: 4px;
+  box-shadow: 0 10px 24px rgba(19, 26, 14, 0.1);
+  font-size: var(--fs-ui-sm);
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+}
+
+.docIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+}
+
+/* --- Faixa de agendamento --- */
+
+.cta {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 34px 40px;
+  background: var(--surface-deep);
+  color: var(--text-on-dark);
+}
+
+.ctaPhone {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.ctaIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--rc-verde-600);
+  border: 1px solid var(--border-on-dark-strong);
+  flex-shrink: 0;
+}
+
+.ctaLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-on-dark-muted);
+}
+
+.ctaNumber {
+  display: block;
+  margin-top: 6px;
+  font-size: 44px;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: var(--text-on-dark);
+  white-space: nowrap;
+  transition: color var(--dur) var(--ease);
+}
+
+.ctaNumber:hover {
+  color: var(--rc-salvia-300);
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 48px;
+  border-left: var(--hairline-dark);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepNum {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-label-sm);
+  color: var(--accent-label-dark);
+}
+
+.stepTitle {
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: var(--fs-title-5);
+  line-height: 1.15;
+}
+
+.stepText {
+  margin-top: 6px;
+  font-size: var(--fs-ui-sm);
+  line-height: 1.45;
+  color: var(--text-on-dark-muted);
+}
+
+.footnote {
+  margin: 16px 0 0;
+  font-size: var(--fs-ui-xs);
+  color: var(--text-faint);
+}
+
+/* --- Responsivo --- */
+
+@media (max-width: 1100px) {
+  .cta {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .steps {
+    padding: 28px 0 0;
+    border-left: 0;
+    border-top: var(--hairline-dark);
+  }
+}
+
+@media (max-width: 900px) {
+  .inner {
+    padding-top: var(--section-y);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .title {
+    font-size: var(--fs-display-4);
+  }
+
+  .docs {
+    left: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: var(--fs-display-5);
+    letter-spacing: var(--tracking-display-sm);
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit + .benefit {
+    border-left: 0;
+    border-top: var(--hairline);
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .visual {
+    padding-bottom: 0;
+  }
+
+  .docs {
+    position: static;
+    margin-top: 12px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .doc {
+    white-space: normal;
+    font-size: var(--fs-ui-xs);
+  }
+
+  .patient {
+    display: none;
+  }
+
+  .doctor {
+    bottom: 16px;
+  }
+
+  .cta {
+    padding: 28px 22px;
+  }
+
+  .ctaIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .ctaNumber {
+    font-size: 30px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

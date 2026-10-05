@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NumberedList from "./NumberedList";
+import NumberedList from "@/components/NumberedList/NumberedList";
 import styles from "./Neabi.module.css";
 
 const frentes = [
@@ -11,7 +11,7 @@ const frentes = [
 
 export default function Neabi() {
   return (
-    <section id="campo" className={styles.section}>
+    <section id="neabi" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.head}>
           <div>

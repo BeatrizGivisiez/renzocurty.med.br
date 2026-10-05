@@ -4,7 +4,7 @@ import styles from "./RemoteAreas.module.css";
 
 export default function RemoteAreas() {
   return (
-    <section id="abmar" className={styles.section}>
+    <section id="areas-remotas" className={styles.section}>
       <div className={styles.glow} />
       <div className={styles.inner}>
         <div className={styles.head}>

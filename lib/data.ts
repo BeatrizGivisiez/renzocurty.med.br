@@ -1,4 +1,58 @@
-export const formacao = [
+export interface FormacaoItem {
+  ano: string;
+  titulo: string;
+  inst: string;
+  nota: string;
+}
+
+export interface PremioItem {
+  ano: string;
+  txt: string;
+}
+
+export interface CertificacaoItem {
+  txt: string;
+  meta: string;
+}
+
+export interface CargoItem {
+  periodo: string;
+  status: "Ativo" | "Concluído";
+  cargo: string;
+  org: string;
+  desc: string;
+}
+
+export interface ArtigoItem {
+  rev: string;
+  ref: string;
+  titulo: string;
+  autores: string;
+}
+
+export interface PalestraItem {
+  tipo: string;
+  ano: string;
+  titulo: string;
+  autores: string;
+}
+
+export interface MidiaItem {
+  titulo: string;
+  autores: string;
+}
+
+export interface CongressoItem {
+  ano: string;
+  txt: string;
+}
+
+export interface NavLink {
+  href: string;
+  label: string;
+}
+
+export const formacao: FormacaoItem[] = [
   {
     ano: "2020 · 2026",
     titulo: "Graduação em Medicina",
@@ -31,7 +85,7 @@ export const formacao = [
   },
 ];
 
-export const premios = [
+export const premios: PremioItem[] = [
   {
     ano: "2026",
     txt: "Mérito Acadêmico do curso de Gestão em Saúde Pública · Universidade de Vassouras",
@@ -51,7 +105,7 @@ export const premios = [
   },
 ];
 
-export const certificacoes = [
+export const certificacoes: CertificacaoItem[] = [
   { txt: "ACLS · Suporte Avançado de Vida em Cardiologia", meta: "16h" },
   { txt: "Prática Baseada em Evidências · Einstein", meta: "2026" },
   { txt: "Demência na APS: idoso e família · Einstein", meta: "2026" },
@@ -59,7 +113,7 @@ export const certificacoes = [
   { txt: "Primeiros Socorros · Projeto Vidas", meta: "36h" },
 ];
 
-export const cargos = [
+export const cargos: CargoItem[] = [
   {
     periodo: "2026 · Atual",
     status: "Ativo",
@@ -97,7 +151,7 @@ export const cargos = [
   },
 ];
 
-export const artigos = [
+export const artigos: ArtigoItem[] = [
   {
     rev: "Rev. Eletrônica Acervo Médico",
     ref: "v.18, e10950 · 2022",
@@ -114,7 +168,7 @@ export const artigos = [
   },
 ];
 
-export const palestras = [
+export const palestras: PalestraItem[] = [
   {
     tipo: "Apresentação de trabalho",
     ano: "2025",
@@ -142,7 +196,7 @@ export const palestras = [
   },
 ];
 
-export const midia = [
+export const midia: MidiaItem[] = [
   {
     titulo: "Dia Nacional das Tradições Africanas: Aquilombar é re-existir",
     autores: "BREVES, R. C. · comentário na mídia",
@@ -153,7 +207,7 @@ export const midia = [
   },
 ];
 
-export const congressosAbmar = [
+export const congressosAbmar: CongressoItem[] = [
   {
     ano: "2024",
     txt: "Impacto das mudanças climáticas na segurança alimentar e saúde populacional",
@@ -161,18 +215,17 @@ export const congressosAbmar = [
   { ano: "2023", txt: "Cuidados paliativos em crises humanitárias" },
 ];
 
-export const motivos = [
+// WhatsApp que recebe as solicitações do formulário de contato
+export const whatsappNumero = "5524998280630";
+
+export const motivos: string[] = [
   "Consulta clínica geral",
   "Consultoria em gestão",
   "Convite acadêmico",
   "Imprensa",
 ];
 
-export const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#trajetoria", label: "Trajetória" },
-  { href: "#atuacao", label: "Atuação" },
-  { href: "#abmar", label: "Áreas remotas" },
-  { href: "#campo", label: "NEABI" },
-  { href: "#ciencia", label: "Produção" },
+export const navLinks: NavLink[] = [
+  { href: "/", label: "Home" },
+  { href: "/sobre", label: "Sobre" },
 ];

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -25,9 +26,9 @@ export default function Hero() {
             <a href="#contato" className={styles.primary}>
               Agendar avaliação
             </a>
-            <a href="#trajetoria" className={styles.secondary}>
+            <Link href="/sobre#trajetoria" className={styles.secondary}>
               Ver trajetória
-            </a>
+            </Link>
           </div>
           <div className={styles.stats}>
             <div>

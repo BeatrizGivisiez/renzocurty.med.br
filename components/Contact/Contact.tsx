@@ -1,32 +1,40 @@
 "use client";
 
 import { useState } from "react";
-import {
-  CalendarBlank,
-  ClipboardText,
-  MapPin,
-  Phone,
-  Siren,
-  Buildings,
-  FileText,
-  ArrowUpRight,
-} from "@phosphor-icons/react";
-import { motivos } from "@/lib/data";
+import type { ChangeEvent, FormEvent } from "react";
+import { CalendarBlank, ClipboardText, MapPin, Phone, WhatsappLogo } from "@phosphor-icons/react";
+import { motivos, whatsappNumero } from "@/lib/data";
 import styles from "./Contact.module.css";
 
 const initialForm = { nome: "", email: "", telefone: "", mensagem: "" };
 
+type FormState = typeof initialForm;
+
 export default function Contact() {
   const [motivo, setMotivo] = useState(motivos[0]);
-  const [form, setForm] = useState(initialForm);
+  const [form, setForm] = useState<FormState>(initialForm);
   const [enviado, setEnviado] = useState(false);
 
-  function handleChange(field) {
-    return (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
+  function handleChange(field: keyof FormState) {
+    return (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((f) => ({ ...f, [field]: e.target.value }));
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    const linhas = [
+      "Olá, Dr. Renzo Curty! Vim pelo site e gostaria de enviar uma solicitação.",
+      "",
+      `*Nome:* ${form.nome.trim()}`,
+      form.email.trim() ? `*E-mail:* ${form.email.trim()}` : null,
+      form.telefone.trim() ? `*Telefone:* ${form.telefone.trim()}` : null,
+      `*Motivo:* ${motivo}`,
+      form.mensagem.trim() ? `\n*Mensagem:*\n${form.mensagem.trim()}` : null,
+    ].filter((l) => l !== null);
+
+    const url = `https://wa.me/${whatsappNumero}?text=${encodeURIComponent(linhas.join("\n"))}`;
+    window.open(url, "_blank", "noopener,noreferrer");
     setEnviado(true);
   }
 
@@ -35,7 +43,7 @@ export default function Contact() {
       <div className={styles.inner}>
         <div className={styles.head}>
           <div>
-            <div className={styles.eyebrow}>07 · Contato</div>
+            <div className={styles.eyebrow}>Contato</div>
             <h2 className={styles.title}>Agende uma avaliação clínica</h2>
           </div>
           <p className={styles.lead}>
@@ -83,47 +91,31 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className={styles.infoRow}>
-          <div className={styles.infoItem}>
-            <div className={styles.infoLabel}>
-              <Siren size={13} />
-              Urgência e emergência
-            </div>
-            <div className={styles.infoValue}>Hospital Municipal Luiz Gonzaga</div>
-            <div className={styles.infoSub}>Plantão de 24h semanais</div>
-          </div>
-          <div className={styles.infoItem}>
-            <div className={styles.infoLabel}>
-              <Buildings size={13} />
-              Institucional
-            </div>
-            <div className={styles.infoValue}>Diretoria Médica · ABMAR</div>
-            <div className={styles.infoSub}>Medicina de áreas remotas</div>
-          </div>
-          <div className={styles.infoItem}>
-            <div className={styles.infoLabel}>
-              <FileText size={13} />
-              Currículo
-            </div>
-            <a href="/curriculo.pdf" target="_blank" className={styles.infoLink}>
-              Currículo Lattes
-              <ArrowUpRight size={13} weight="bold" />
-            </a>
-            <div className={styles.infoSub}>lattes.cnpq.br/9074086930172329</div>
-          </div>
-        </div>
-
         <div className={styles.formPanel}>
           <form className={styles.formGrid} onSubmit={handleSubmit}>
-            <div>
-              <div className={styles.formIntroTitle}>Envie uma solicitação</div>
-              <p className={styles.formIntroText}>
-                Retorno em até dois dias úteis.{" "}
-                <span className={styles.emergencyNote}>
-                  Este formulário não substitui atendimento de urgência: em emergências, procure o
-                  serviço de saúde mais próximo ou ligue 192.
-                </span>
-              </p>
+            <div className={styles.formIntro}>
+              <div className={styles.formIntroBlock}>
+                <div className={styles.formIntroTitle}>Envie uma solicitação</div>
+                <p className={styles.formIntroText}>
+                  Retorno em até dois dias úteis.{" "}
+                  <span className={styles.emergencyNote}>
+                    Este formulário não substitui atendimento de urgência: em emergências, procure
+                    o serviço de saúde mais próximo ou ligue 192.
+                  </span>
+                </p>
+              </div>
+
+              <div className={styles.submitRow}>
+                {enviado && (
+                  <span className={styles.confirmation}>
+                    Abrimos o WhatsApp com sua mensagem. Toque em enviar para concluir.
+                  </span>
+                )}
+                <button type="submit" className={styles.submitBtn}>
+                  <WhatsappLogo size={18} weight="bold" />
+                  Enviar pelo WhatsApp
+                </button>
+              </div>
             </div>
 
             <div className={styles.fields}>
@@ -149,7 +141,6 @@ export default function Contact() {
                     className={styles.input}
                     value={form.email}
                     onChange={handleChange("email")}
-                    required
                   />
                 </div>
                 <div className={styles.field}>
@@ -203,17 +194,6 @@ export default function Contact() {
                   value={form.mensagem}
                   onChange={handleChange("mensagem")}
                 />
-              </div>
-
-              <div className={styles.submitRow}>
-                {enviado && (
-                  <span className={styles.confirmation}>
-                    Solicitação registrada. Retorno em até dois dias úteis.
-                  </span>
-                )}
-                <button type="submit" className={styles.submitBtn}>
-                  Enviar solicitação
-                </button>
               </div>
             </div>
           </form>
