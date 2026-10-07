@@ -39,11 +39,11 @@ export default function About() {
 
         <div>
           <div className={styles.eyebrow}>01 · Sobre</div>
-          <h2 className={styles.title}>
+          <h1 className={styles.title}>
             Clínica, gestão e ensino
             <br />
             no mesmo movimento.
-          </h2>
+          </h1>
           <p className={styles.paragraph}>
             Médico pela Universidade de Vassouras e gestor em Saúde Pública, com pós-graduações em
             Psicanálise Clínica e em Docência no Ensino Superior e Metodologias Ativas. Dedica-se
