@@ -90,15 +90,59 @@
   color: var(--surface-dark);
 }
 
+.headerOpen {
+  background: var(--surface-deep);
+  border-bottom-color: transparent;
+}
+
 .menuToggle {
   display: none;
+  position: relative;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
   background: transparent;
   border: 1px solid var(--border-on-dark-strong);
-  color: var(--text-on-dark);
-  padding: 8px;
   border-radius: var(--radius-sm);
-  align-items: center;
-  justify-content: center;
+  color: var(--text-on-dark);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menuLine {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 1.5px;
+  margin-left: -10px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+
+.menuLine:nth-child(1) {
+  transform: translateY(-6px);
+}
+
+.menuLine:nth-child(3) {
+  transform: translateY(6px);
+}
+
+.menuToggleOpen .menuLine:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menuToggleOpen .menuLine:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggleOpen .menuLine:nth-child(3) {
+  transform: rotate(-45deg);
 }
 
 .mobilePanel {
@@ -106,8 +150,21 @@
 }
 
 @media (max-width: 900px) {
-  .brandText {
-    display: none;
+  .bar {
+    gap: 16px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .monogram {
+    width: 44px;
+    height: 36px;
+  }
+
+  .brandName {
+    font-size: 18px;
   }
 
   .nav {
@@ -115,22 +172,46 @@
   }
 
   .menuToggle {
-    display: flex;
+    display: block;
   }
 
   .mobilePanel {
-    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 49;
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--header-h) + 12px) var(--container-gutter) calc(28px + env(safe-area-inset-bottom));
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     background: var(--surface-deep);
-    border-bottom: var(--hairline-dark);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--dur) var(--ease), visibility 0s linear var(--dur);
+  }
+
+  .mobilePanelOpen {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--dur) var(--ease);
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
   }
 
   .mobileLink {
     display: block;
-    padding: 16px var(--container-gutter);
-    font-size: 14.5px;
-    font-weight: var(--fw-medium);
+    padding: 20px 0;
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1.15;
     color: var(--text-on-dark-secondary);
-    border-top: var(--hairline-dark);
+    border-bottom: var(--hairline-dark);
   }
 
   .mobileLink:hover,
@@ -139,13 +220,24 @@
   }
 
   .mobileCta {
-    margin: 18px var(--container-gutter) 22px;
-    padding: 14px 22px;
+    display: block;
+    margin-top: auto;
+    padding: 16px 22px;
     background: var(--rc-creme);
     color: var(--surface-dark);
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: var(--fw-semibold);
     border-radius: var(--radius-sm);
     text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand {
+    gap: 10px;
+  }
+
+  .brandName {
+    font-size: 16px;
   }
 }
